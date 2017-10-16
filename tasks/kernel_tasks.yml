@@ -1,0 +1,8 @@
+---
+- name: Disable ICMP Redirects
+  sysctl:
+    name: net.ipv4.conf.all.accept_redirects
+    value: "{{ rax_svr_cfg_icmp_redirect }}"
+    sysctl_set: "yes"
+    state: present
+    reload: "yes"

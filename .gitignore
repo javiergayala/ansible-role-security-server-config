@@ -1,0 +1,8 @@
+*.pyc
+.molecule/
+.vault
+*.log
+.cache
+roles
+junit.xml
+varnishtest/

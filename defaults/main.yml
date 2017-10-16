@@ -1,0 +1,15 @@
+---
+# defaults file for ansible-role-rax.security-server-config
+
+###########################################################
+#  _  __                    _
+# | |/ /___ _ __ _ __   ___| |
+# | ' // _ \ '__| '_ \ / _ \ |
+# | . \  __/ |  | | | |  __/ |
+# |_|\_\___|_|  |_| |_|\___|_|
+###########################################################
+
+# Disable ICMP Redirects
+rax_svr_cfg_icmp_redirect: 0
+# Disable TCP Timestamps
+rax_svr_cfg_tcp_timestamps: 0
