@@ -1,4 +1,4 @@
-# `rswebteam.security-server-config`
+# `ansible-role-security-server-config`
 
 This role applies generic security-related server configuration changes.  These
 may be resulting from TVA security scans of our environment, or best
