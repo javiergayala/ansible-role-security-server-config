@@ -11,7 +11,10 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 @pytest.mark.parametrize('config_line', [
     # Disable ICMP Redirects
-    'net.ipv4.conf.all.accept_redirects(\s+)?=(\s+)?0'
+    'net.ipv4.conf.all.accept_redirects(\s+)?=(\s+)?0',
+    'net.ipv4.conf.default.accept_redirects(\s+)?=(\s+)?0',
+    'net.ipv4.conf.all.secure_redirects(\s+)?=(\s+)?0',
+    'net.ipv4.conf.default.secure_redirects(\s+)?=(\s+)?0',
 ])
 def test_sysctl_file(host, config_line):
     """Test that certain entries exist in the file."""

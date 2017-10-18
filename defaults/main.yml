@@ -11,5 +11,7 @@
 
 # Disable ICMP Redirects
 rax_svr_cfg_icmp_redirect: 0
-# Disable TCP Timestamps
-rax_svr_cfg_tcp_timestamps: 0
+
+# Whether to disable root console logins
+# False: no do not disable, True: yes disable
+rax_svr_cfg_disable_anon_root_login: "False"

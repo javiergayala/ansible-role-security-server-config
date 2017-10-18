@@ -1,0 +1,11 @@
+---
+- name: Disable Anonymous Root Logins (console)
+  replace:
+    path: "/etc/securetty"
+    regexp: "^{{ item }}$"
+  with_items:
+    - "tty\\D+.*"
+    - "sclp.*"
+    - "\\d+.*"
+    - "(h|x)\\D+.*"
+    - "\\n"

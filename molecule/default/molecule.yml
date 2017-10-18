@@ -23,6 +23,9 @@ provisioner:
   #   converge: ../../playbook.yml
   env:
     ANSIBLE_ROLES_PATH: "roles:../../../"
+  inventory:
+    links:
+      host_vars: ../host_vars/
   # config_options:
   #   defaults:
   #     vault_password_file: "../../.vault"
