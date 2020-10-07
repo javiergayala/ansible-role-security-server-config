@@ -1,5 +1,15 @@
 ---
-- name: Prepare
+- name: Prepare Amazonlinux
+  hosts: amazonlinux2
+  tasks:
+    - name: Install systemd
+      package:
+        name: systemd
+        state: present
+- name: Prepare All
   hosts: all
-  gather_facts: "False"
-  tasks: []
+  tasks:
+    - name: Install procps
+      package:
+        name: procps-ng
+        state: present

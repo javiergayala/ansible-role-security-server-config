@@ -1,6 +1,6 @@
 ---
-# tasks file for ansible-role-rax.security-server-config
+# tasks file for javiergayala.security-server-config
 - include: kernel_tasks.yml
 
 - include: disable_anon_root.yml
-  when: rax_svr_cfg_disable_anon_root_login is defined and rax_svr_cfg_disable_anon_root_login
+  when: sec_svr_cfg_disable_anon_root_login is defined and sec_svr_cfg_disable_anon_root_login

@@ -1,8 +1,6 @@
 # `ansible-role-security-server-config`
 
-This role applies generic security-related server configuration changes.  These
-may be resulting from TVA security scans of our environment, or best
-practices.
+This role applies generic security-related server configuration changes.
 
 ## Requirements
 
@@ -14,7 +12,11 @@ From the `defaults/main.yml` file:
 
 ```yaml
 # Disable ICMP Redirects
-rax_svr_cfg_icmp_redirect: 0
+sec_svr_cfg_icmp_redirect: 0
+
+# Whether to disable root console logins
+# False: no do not disable, True: yes disable
+sec_svr_cfg_disable_anon_root_login: "False"
 ```
 
 ## Dependencies
@@ -24,9 +26,12 @@ None
 ## Example Playbook
 
 ```yaml
-    - hosts: servers
-      roles:
-         - { role: rswebteam.security-server-config, rax_svr_cfg_icmp_redirect: 1 }
+- hosts: servers
+  roles:
+    - {
+        role: javiergayala.security-server-config,
+        sec_svr_cfg_icmp_redirect: 1,
+      }
 ```
 
 ## Author Information

@@ -1,0 +1,73 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Validate securetty file for existence of items
+      lineinfile:
+        path: /etc/securetty
+        line: "{{ item }}"
+        state: present
+      register: securetty_validation_exists
+      failed_when: securetty_validation_exists is changed
+      loop:
+        - console
+        - vc/1
+        - vc/2
+        - vc/3
+        - vc/4
+        - vc/5
+        - vc/6
+        - vc/7
+        - vc/8
+        - vc/9
+        - vc/10
+        - vc/11
+        - tty1
+        - tty2
+        - tty3
+        - tty4
+        - tty5
+        - tty6
+        - tty7
+        - tty8
+        - tty9
+        - tty10
+        - tty11
+    - name: Validate securetty file for non-existence of items
+      lineinfile:
+        path: /etc/securetty
+        line: "{{ item }}"
+        state: absent
+      register: securetty_validation_not_exists
+      failed_when: securetty_validation_not_exists is changed
+      loop:
+        - ttyS0
+        - ttysclp0
+        - sclp_line0
+        - 3270/tty1
+        - "hvc[0-9]+"
+        - hvc1
+        - hvc2
+        - hvc3
+        - hvc4
+        - hvc5
+        - hvc6
+        - hvc7
+        - hvsi0
+        - hvsi1
+        - hvsi2
+        - xvc0
+    - name: Validate ICMP Redirects are disabled
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: "{{ item }}"
+        state: present
+      register: sysctl_icmp_redir_validation
+      failed_when: sysctl_icmp_redir_validation is changed
+      loop:
+        - net.ipv4.conf.all.accept_redirects=0
+        - net.ipv4.conf.default.accept_redirects=0
+        - net.ipv4.conf.all.secure_redirects=0
+        - net.ipv4.conf.default.secure_redirects=0

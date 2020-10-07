@@ -1,5 +1,5 @@
 ---
-# defaults file for ansible-role-rax.security-server-config
+# defaults file for javiergayala.security-server-config
 
 ###########################################################
 #  _  __                    _
@@ -10,8 +10,8 @@
 ###########################################################
 
 # Disable ICMP Redirects
-rax_svr_cfg_icmp_redirect: 0
+sec_svr_cfg_icmp_redirect: 0
 
 # Whether to disable root console logins
 # False: no do not disable, True: yes disable
-rax_svr_cfg_disable_anon_root_login: "False"
+sec_svr_cfg_disable_anon_root_login: "False"

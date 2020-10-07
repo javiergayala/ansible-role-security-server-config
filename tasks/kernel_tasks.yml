@@ -2,7 +2,7 @@
 - name: Disable ICMP Redirects
   sysctl:
     name: "{{ item }}"
-    value: "{{ rax_svr_cfg_icmp_redirect }}"
+    value: "{{ sec_svr_cfg_icmp_redirect }}"
     sysctl_set: "yes"
     state: present
     reload: "yes"
