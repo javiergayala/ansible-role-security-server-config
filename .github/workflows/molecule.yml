@@ -1,9 +1,9 @@
 ---
 name: Molecule
 on:
-  push:
-    branches:
-      - refresh
+  # push:
+  #   branches:
+  #     - refresh
   pull_request:
     branches:
       - master
