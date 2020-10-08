@@ -1,4 +1,4 @@
-![Molecule](https://github.com/javiergayala/ansible-role-security-server-config/workflows/Molecule/badge.svg)
+![CI](https://github.com/javiergayala/ansible-role-security-server-config/workflows/CI/badge.svg)
 
 # `ansible-role-security-server-config`
 
