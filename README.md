@@ -1,3 +1,5 @@
+![Molecule](https://github.com/javiergayala/ansible-role-security-server-config/workflows/Molecule/badge.svg)
+
 # `ansible-role-security-server-config`
 
 This role applies generic security-related server configuration changes.
