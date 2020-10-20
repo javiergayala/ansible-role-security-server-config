@@ -1,4 +1,4 @@
-![CI](https://github.com/javiergayala/ansible-role-security-server-config/workflows/CI/badge.svg) ![Ansible Role](https://img.shields.io/ansible/role/51197?logo=ansible) ![Ansible Role](https://img.shields.io/ansible/role/d/51197) ![Ansible Quality Score](https://img.shields.io/ansible/quality/51197)
+![CI](https://github.com/javiergayala/ansible-role-security-server-config/workflows/CI/badge.svg) ![Ansible Role](https://img.shields.io/ansible/role/51197?logo=ansible) ![Ansible Role](https://img.shields.io/ansible/role/d/51197) ![Ansible Quality Score](https://img.shields.io/ansible/quality/51197) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/javiergayala/ansible-role-security-server-config?sort=semver) ![GitHub Release Date](https://img.shields.io/github/release-date/javiergayala/ansible-role-security-server-config)
 
 # `ansible-role-security-server-config`
 
