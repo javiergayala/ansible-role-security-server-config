@@ -1,4 +1,4 @@
-![CI](https://github.com/javiergayala/ansible-role-security-server-config/workflows/CI/badge.svg)
+![CI](https://github.com/javiergayala/ansible-role-security-server-config/workflows/CI/badge.svg) ![Ansible Role](https://img.shields.io/ansible/role/51197) ![Ansible Role](https://img.shields.io/ansible/role/d/51197) ![Ansible Quality Score](https://img.shields.io/ansible/quality/51197)
 
 # `ansible-role-security-server-config`
 
